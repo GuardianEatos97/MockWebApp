@@ -22,6 +22,20 @@ namespace MockWebApp.Controllers
         {
             return View();
         }
+        public IActionResult CurrentProgramWorkout()
+        {
+            return View();
+        }
+        public IActionResult SelectExercise()
+        {
+            return View();
+        }
+        public IActionResult BodyPartSelect()
+        {
+            return View();
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
