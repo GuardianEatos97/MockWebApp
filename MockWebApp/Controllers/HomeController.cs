@@ -22,8 +22,11 @@ namespace MockWebApp.Controllers
         {
             return View();
         }
-
-        public IActionResult BodyPartSelect()
+        public IActionResult CurrentProgramWorkout()
+        {
+            return View();
+        }
+        public IActionResult SelectExercise()
         {
             return View();
         }
