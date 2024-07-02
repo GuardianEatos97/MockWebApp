@@ -22,6 +22,7 @@ namespace MockWebApp.Controllers
         {
             return View();
         }
+<<<<<<< Updated upstream
 
         public IActionResult CurrentProgramWorkout()
         {
@@ -55,6 +56,9 @@ namespace MockWebApp.Controllers
         {
             return View();
         }
+=======
+
+>>>>>>> Stashed changes
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

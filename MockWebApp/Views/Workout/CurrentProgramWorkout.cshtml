@@ -2,45 +2,49 @@
 @{
     ViewData["Title"] = "CurrentProgramWorkout";
 }
-<div class="align-self-sm-center">
-    <h1>Current Program Workout</h1>
-    <div class="scrollable-list-container">
-        <ul class="scrollable-list">
-            <li>Strength And Conditioning</li>
-            <li>Agility</li>
-            <li>Forwards Workout</li>
-            <li>Backline Workout</li>
-            <li>Scrumhalf Exercises</li>
-        </ul>
-    </div>
+<body>
+    <div class="align-self-sm-center">
+        <div class="title-color">
+            <h1>Current Program Workout</h1>
+        </div>
 
-    <div>
-        <h2>Enter your name:</h2>
-        @using (Html.BeginForm("Submit", "Home", FormMethod.Post))
-        {
-            <div>
+        <div class="scrollable-list-container">
+            <ul class="scrollable-list">
+                <li>Strength And Conditioning</li>
+                <li>Agility</li>
+                <li>Forwards Workout</li>
+                <li>Backline Workout</li>
+                <li>Scrumhalf Exercises</li>
+            </ul>
+        </div>
 
-                <input type="submit" value="Submit" />
-            </div>
-        }
-        @if (!string.IsNullOrEmpty(Model.Result))
-        {
-            <div>
-                <h3>@Model.Result</h3>
-            </div>
-        }
+            <button type="button">Add Workout Program</button>
+
+        
     </div>
-    <button class="center-button" type="button">Add Workout Program</button>
-</div>
+</body>
+
 
 
 
 <style>
+
+    body{
+        background-color: #000435;
+        color: white;
+    }
+
+    .title-color{
+        color: #D4AF37;
+        text-align: center;
+    }
     .scrollable-list-container {
+        margin-block-start: 1rem;
         max-height: 400px;
         width: auto;
-        border: 1px solid #000;
+        border: 1px solid #D4AF37;
         padding: 1rem;
+        background-color: white;
         overflow-y: scroll;
     }
 
@@ -49,23 +53,26 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
+        color: #D4AF37;
     }
 
     .scrollable-list li {
         padding: 8px;
         border-bottom: 1px solid #ddd;
+        color: #D4AF37;
     }
 
     .scrollable-list li:last-child {
         border-bottom: none;
     }
 
-    .center-button {
-        border: 1px solid #000;
-        border-radius: 5px;
+    button {
         padding: 0.5rem 1rem;
-        margin-top: 1rem;
-        text-align: center;
+        font-size: 1rem;
+        border: none;
+        background: #D4AF37;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
     }
 
 
