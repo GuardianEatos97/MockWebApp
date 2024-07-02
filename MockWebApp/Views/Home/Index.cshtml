@@ -2,6 +2,303 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #000435;
+            color: #D4AF37;
+        }
+
+        header {
+            background: #D4AF37;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+            nav ul li {
+                margin-left: 1rem;
+            }
+
+                nav ul li a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+        .cta {
+            background: #D4AF37;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('images/hero.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        section {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .events, .news, .team-grid, .testimonial-carousel, .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .event-card, .news-card, .team-card, .testimonial-card {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+
+            .event-card img, .news-card img, .team-card img, .testimonial-card img {
+                max-width: 100%;
+                border-radius: 5px;
+            }
+
+        .sponsor-logos img {
+            max-width: 10%;
+            margin: 0 1rem;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .newsletter input {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #fff;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: none;
+            background: #D4AF37;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+        }
+
+        footer {
+            background: #D4AF37;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+            footer .quick-links, footer .social-media, footer .contact-info {
+                margin-bottom: 1rem;
+            }
+
+            footer a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 0.5rem;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Demo Website</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Experience the Thrill of the Game</h1>
+            <p>Join us and never miss a moment of the action.</p>
+        </div>
+    </section>
+
+    <section class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <div class="events">
+            <!-- Event Cards -->
+            <div class="event-card">
+                <img src="images/event1.jpg" alt="Event 1">
+                <h3>Event 1</h3>
+                <p>Details about Event 1.</p>
+            </div>
+            <div class="event-card">
+                <img src="images/event2.jpg" alt="Event 2">
+                <h3>Event 2</h3>
+                <p>Details about Event 2.</p>
+            </div>
+            <div class="event-card">
+                <img src="images/event3.jpg" alt="Event 3">
+                <h3>Event 3</h3>
+                <p>Details about Event 3.</p>
+            </div>
+        </div>
+        <a href="#" class="cta">View All Events</a>
+    </section>
+
+    <section class="latest-news">
+        <h2>Latest News</h2>
+        <div class="news">
+            <!-- News Cards -->
+            <div class="news-card">
+                <img src="images/news1.jpg" alt="News 1">
+                <h3>News Title 1</h3>
+                <p>Brief excerpt of the news article.</p>
+            </div>
+            <div class="news-card">
+                <img src="images/news2.jpg" alt="News 2">
+                <h3>News Title 2</h3>
+                <p>Brief excerpt of the news article.</p>
+            </div>
+            <div class="news-card">
+                <img src="images/news3.jpg" alt="News 3">
+                <h3>News Title 3</h3>
+                <p>Brief excerpt of the news article.</p>
+            </div>
+        </div>
+        <a href="#" class="cta">Read More</a>
+    </section>
+
+    <section class="teams">
+        <h2>Our Teams</h2>
+        <div class="team-grid">
+            <!-- Team Cards -->
+            <div class="team-card">
+                <img src="images/team1.jpg" alt="Team 1">
+                <h3>Team 1</h3>
+                <p>Brief description of Team 1.</p>
+            </div>
+            <div class="team-card">
+                <img src="images/team2.jpg" alt="Team 2">
+                <h3>Team 2</h3>
+                <p>Brief description of Team 2.</p>
+            </div>
+            <div class="team-card">
+                <img src="images/team3.jpg" alt="Team 3">
+                <h3>Team 3</h3>
+                <p>Brief description of Team 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Fans Say</h2>
+        <div class="testimonial-carousel">
+            <!-- Testimonial Cards -->
+            <div class="testimonial-card">
+                <img src="images/fan1.jpg" alt="Fan 1">
+                <p>"Amazing experience! Can't wait for the next game."</p>
+                <h4>Fan 1</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/fan2.jpg" alt="Fan 2">
+                <p>"The atmosphere was electric! Highly recommend."</p>
+                <h4>Fan 2</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/fan3.jpg" alt="Fan 3">
+                <p>"Best sports event I've ever attended!"</p>
+                <h4>Fan 3</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors">
+        <h2>Our Sponsors</h2>
+        <div class="sponsor-logos">
+            <!-- Sponsor Logos -->
+            <img src="images/sponsor1.png" alt="Sponsor 1">
+            <img src="images/sponsor2.png" alt="Sponsor 2">
+            <img src="images/sponsor3.png" alt="Sponsor 3">
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="cta">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="quick-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Site Map</a>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="contact-info">
+            <p>University of the Western Cape, Cape Town, South Africa</p>
+            <p>021 591 2245 </p>
+            <p>rugby@uwc.ac.za</p>
+        </div>
+    </footer>
+</body>
+</html>
+
