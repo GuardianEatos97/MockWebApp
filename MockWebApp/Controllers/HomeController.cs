@@ -40,13 +40,16 @@ namespace MockWebApp.Controllers
             return View();
         }
 
-
-
         public IActionResult PhysioCP()
         {
             return View();
         }
         public IActionResult SelectAthlete()
+        {
+            return View();
+        }
+
+        public IActionResult Preview()
         {
             return View();
         }
