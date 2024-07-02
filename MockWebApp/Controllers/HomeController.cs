@@ -41,16 +41,6 @@ namespace MockWebApp.Controllers
             return View();
         }
 
-        public IActionResult BuildProgram()
-        {
-            return View();
-        }
-
-        public IActionResult AthleteName()
-        {
-            return View();
-        }
-
         public IActionResult PhysioCP()
         {
             return View();
@@ -61,6 +51,11 @@ namespace MockWebApp.Controllers
         }
 =======
 >>>>>>> Stashed changes
+
+        public IActionResult Preview()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
