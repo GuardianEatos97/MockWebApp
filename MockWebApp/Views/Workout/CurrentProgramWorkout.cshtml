@@ -13,6 +13,23 @@
             <li>Scrumhalf Exercises</li>
         </ul>
     </div>
+
+    <div>
+        <h2>Enter your name:</h2>
+        @using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+        {
+            <div>
+
+                <input type="submit" value="Submit" />
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.Result))
+        {
+            <div>
+                <h3>@Model.Result</h3>
+            </div>
+        }
+    </div>
     <button class="center-button" type="button">Add Workout Program</button>
 </div>
 

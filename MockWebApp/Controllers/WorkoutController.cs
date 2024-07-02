@@ -1,28 +1,18 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MockWebApp.Models;
 using System.Diagnostics;
 
 namespace MockWebApp.Controllers
 {
-    public class HomeController : Controller
+    public class WorkoutController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<WorkoutController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public WorkoutController(ILogger<WorkoutController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-<<<<<<< Updated upstream
         public IActionResult CurrentProgramWorkout()
         {
             return View();
@@ -41,21 +31,6 @@ namespace MockWebApp.Controllers
             return View();
         }
 
-        public IActionResult PhysioCP()
-        {
-            return View();
-        }
-        public IActionResult SelectAthlete()
-        {
-            return View();
-        }
-=======
->>>>>>> Stashed changes
-
-        public IActionResult Preview()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
