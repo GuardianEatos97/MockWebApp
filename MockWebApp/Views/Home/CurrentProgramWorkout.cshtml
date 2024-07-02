@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "CurrentProgramWorkout";
+}
+<div class="align-self-sm-center">
+    <h1>Current Program Workout</h1>
+    <div class="scrollable-list-container">
+        <ul class="scrollable-list">
+            <li>Strength And Conditioning</li>
+            <li>Agility</li>
+            <li>Forwards Workout</li>
+            <li>Backline Workout</li>
+            <li>Scrumhalf Exercises</li>
+        </ul>
+    </div>
+    <button class="center-button" type="button">Add Workout Program</button>
+</div>
+
+
+
+<style>
+    .scrollable-list-container {
+        max-height: 400px;
+        width: auto;
+        border: 1px solid #000;
+        padding: 1rem;
+        overflow-y: scroll;
+    }
+
+
+    .scrollable-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .scrollable-list li {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .scrollable-list li:last-child {
+        border-bottom: none;
+    }
+
+    .center-button {
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+
+</style>
+
