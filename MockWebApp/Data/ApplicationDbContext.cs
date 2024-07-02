@@ -3,12 +3,12 @@ using MockWebApp.Models.Entities;
 
 namespace MockWebApp.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-        
+
         public DbSet<User> Users { get; set; }
         public DbSet<BodyPart> BodyParts { get; set; }
         public DbSet<Excercise> Excercises { get; set; }
