@@ -50,14 +50,12 @@ namespace MockWebApp.Controllers
             return View();
         }
 
+        
 
         public IActionResult CustomProgram()
         {
             return View();
         }
-=======
-
->>>>>>> Stashed changes
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
