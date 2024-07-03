@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "CurrentProgramWorkout";
 }
+
 <body>
     <div class="align-self-sm-center">
         <div class="title-color">
@@ -28,11 +29,53 @@
 
 
 <style>
-
-    body{
-        background-color: #000435;
-        color: white;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
     }
+
+    header {
+        background: #D4AF37;
+        color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    body {
+        line-height: 1.6;
+        background-color: #000435;
+        color: #D4AF37;
+    }
+
+    footer {
+        background: #D4AF37;
+        color: #fff;
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+        nav ul li {
+            margin-left: 1rem;
+        }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
 
     .title-color{
         color: #D4AF37;
@@ -47,7 +90,6 @@
         background-color: white;
         overflow-y: scroll;
     }
-
 
     .scrollable-list {
         list-style-type: none;
@@ -74,7 +116,5 @@
         color: #fff;
         border-radius: 0 5px 5px 0;
     }
-
-
 </style>
 
