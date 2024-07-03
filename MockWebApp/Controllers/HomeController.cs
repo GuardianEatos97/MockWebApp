@@ -22,7 +22,7 @@ namespace MockWebApp.Controllers
         {
             return View();
         }
-<<<<<<< Updated upstream
+
         public IActionResult CurrentProgramWorkout()
         {
             return View();
@@ -49,8 +49,6 @@ namespace MockWebApp.Controllers
         {
             return View();
         }
-=======
->>>>>>> Stashed changes
 
         public IActionResult Preview()
         {
