@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -15,69 +14,73 @@ namespace MockWebApp.Migrations
                 name: "BodyParts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    BodyPartId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    BodyPartName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BodyPartDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BodyParts", x => x.Id);
+                    table.PrimaryKey("PK_BodyParts", x => x.BodyPartId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Excercises",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    ExcerciseId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ExcerciseName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ExcerciseDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BodyPartID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Excercises", x => x.Id);
+                    table.PrimaryKey("PK_Excercises", x => x.ExcerciseId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ServiceProviders",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    SPId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    SPName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SPEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SPPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SPType = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ServiceProviders", x => x.Id);
+                    table.PrimaryKey("PK_ServiceProviders", x => x.SPId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Types",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    TypeID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    TypeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TypeDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Types", x => x.Id);
+                    table.PrimaryKey("PK_Types", x => x.TypeID);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Jersey = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Team = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserPic = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserJersey = table.Column<int>(type: "int", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserTeam = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,32 +88,32 @@ namespace MockWebApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "workOut_Excercises",
+                name: "Workout_Excercises",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ExcerciseID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    WorkOutID = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ExcerciseID = table.Column<int>(type: "int", nullable: false),
+                    WorkOutID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_workOut_Excercises", x => x.Id);
+                    table.PrimaryKey("PK_Workout_Excercises", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "workouts",
+                name: "Workouts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    WorkoutId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserID = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    WorkoutName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    WorkoutDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_workouts", x => x.Id);
+                    table.PrimaryKey("PK_Workouts", x => x.WorkoutId);
                 });
         }
 
@@ -133,10 +136,10 @@ namespace MockWebApp.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "workOut_Excercises");
+                name: "Workout_Excercises");
 
             migrationBuilder.DropTable(
-                name: "workouts");
+                name: "Workouts");
         }
     }
 }

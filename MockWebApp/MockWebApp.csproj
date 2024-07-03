@@ -30,4 +30,8 @@
     <None Include="Views\Users\List.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
