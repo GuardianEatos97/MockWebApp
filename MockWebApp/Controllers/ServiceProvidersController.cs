@@ -23,8 +23,8 @@ namespace MockWebApp.Controllers
         {
             var provider = new Provider
             {
-                Name = providerVM.Name,
-                Type = providerVM.Type,
+                SPName = providerVM.SPName,
+                SPType = providerVM.SPType,
             };
             await databaseContext.ServiceProviders.AddAsync(provider);
             await databaseContext.SaveChangesAsync();
