@@ -68,7 +68,7 @@ namespace MockWebApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete(int id)
         {
             var athete = await databaseContext.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
             if (athete is not null)
