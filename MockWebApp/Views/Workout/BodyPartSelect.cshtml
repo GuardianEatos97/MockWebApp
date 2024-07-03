@@ -61,53 +61,59 @@
 
 
 <form method="post">
+<div class="image-container">
+        <div class="mt-3">
+            <label class="form-label">Arms</label>
+        </div>
+        <a href="@Url.Action("SelectExercise")">
+            <img class="image" type="image" src="https://hips.hearstapps.com/hmg-prod/images/bodybuilder-preparing-a-barbell-on-a-power-rack-in-royalty-free-image-1604683794.?crop=0.750xw:1.00xh;0.250xw,0&resize=640:*" style="width:250px;height:250px;" alt="Clickable Image" />
+        </a>
 
-<div class="mt-3">
-    <label class="form-label">Arms</label>
+        <div class="mt-3">
+            <label class="form-label">Back And Shoulders</label>
+        </div>
+
+        <a href="@Url.Action("SelectExercise")">
+            <img class="image" type="image" src="https://cdn11.bigcommerce.com/s-3pp378gtvu/images/stencil/2560w/uploaded_images/shoulder-and-back-workout.jpg?t=1668539564" style="width:250px;height:250px;" alt="Clickable Image" />
+        </a>
 </div>
-    <a href="@Url.Action("SelectExercise")">
-        <img type="image" src="https://hips.hearstapps.com/hmg-prod/images/bodybuilder-preparing-a-barbell-on-a-power-rack-in-royalty-free-image-1604683794.?crop=0.750xw:1.00xh;0.250xw,0&resize=640:*" style="width:250px;height:250px;" alt="Clickable Image" />
-</a>
 
-    <div class="mt-3">
-        <label class="form-label">Back And Shoulders</label>
+    <div class="image-container">
+        <div class="mt-3">
+            <label class="form-label">Chest</label>
+        </div>
+
+        <a href="@Url.Action("SelectExercise")">
+            <img class="image" type="image" src="https://hansplace.com/wp-content/uploads/iStock_000015641412Small-2.jpg" style="width:250px;height:250px;" alt="Clickable Image" />
+        </a>
+
+        <div class="mt-3">
+            <label class="form-label">Abs</label>
+        </div>
+
+        <a href="@Url.Action("SelectExercise")">
+            <img class="image" type="image" src="https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2019/08/Guy-Showing-Off-Abs-and-Chest.jpg?quality=86&strip=all" style="width:250px;height:250px;" alt="Clickable Image" />
+        </a>
     </div>
 
-    <a href="@Url.Action("SelectExercise")">
-        <img type="image" src="https://cdn11.bigcommerce.com/s-3pp378gtvu/images/stencil/2560w/uploaded_images/shoulder-and-back-workout.jpg?t=1668539564" style="width:250px;height:250px;" alt="Clickable Image" />
-    </a>
+    <div class="image-container">
+        <div class="mt-3">
+            <label class="form-label">Legs</label>
+        </div>
 
-    <div class="mt-3">
-        <label class="form-label">Chest</label>
+        <a href="@Url.Action("SelectExercise")">
+            <img class="image" type="image" src="https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2000/09/Man-And-Woman-Showing-Muscular-Legs.jpg?quality=86&strip=all" style="width:250px;height:250px;" alt="Clickable Image" />
+        </a>
+
+        <div class="mt-3">
+            <label class="form-label">Cardio</label>
+        </div>
+
+        <a href="@Url.Action("SelectExercise")">
+            <img class="image" type="image" src="https://youfit.com/wp-content/uploads/2022/09/cardio-workouts-at-the-gym.png" style="width:250px;height:250px;" alt="Clickable Image" />
+        </a>
+
     </div>
-
-    <a href="@Url.Action("SelectExercise")">
-        <img type="image" src="https://hansplace.com/wp-content/uploads/iStock_000015641412Small-2.jpg" style="width:250px;height:250px;" alt="Clickable Image" />
-    </a>
-
-    <div class="mt-3">
-        <label class="form-label">Abs</label>
-    </div>
-
-    <a href="@Url.Action("SelectExercise")">
-        <img type="image" src="https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2019/08/Guy-Showing-Off-Abs-and-Chest.jpg?quality=86&strip=all" style="width:250px;height:250px;" alt="Clickable Image" />
-    </a>
-
-    <div class="mt-3">
-        <label class="form-label">Legs</label>
-    </div>
-
-    <a href="@Url.Action("SelectExercise")">
-        <img type="image" src="https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2000/09/Man-And-Woman-Showing-Muscular-Legs.jpg?quality=86&strip=all" style="width:250px;height:250px;" alt="Clickable Image" />
-    </a>
-    
-    <div class="mt-3">
-        <label class="form-label">Cardio</label>
-    </div>
-
-    <a href="@Url.Action("SelectExercise")">
-        <img type="image" src="https://youfit.com/wp-content/uploads/2022/09/cardio-workouts-at-the-gym.png" style="width:250px;height:250px;" alt="Clickable Image"/>
-    </a>
 
 
 @* <div class="mt-3">
@@ -125,14 +131,27 @@
         text-align: center;
     }
 
-    image{
-         border: 3px solid #ddd;
+    .image{
+         border-width: 3px;
+         border-style: solid;
+         border-color: #D4AF37;
+         align-content: center;
+         border-radius: 20px;
     }
 
     .form-label{
                 color: #D4AF37;
-                text-align: center;
+                text-align:center;
+               
+
     }
+
+    .image-container{
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 10, 100%, auto;
+    }
+
     
 
 </style>
