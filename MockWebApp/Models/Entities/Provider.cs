@@ -1,10 +1,15 @@
-﻿namespace MockWebApp.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MockWebApp.Models.Entities
 {
     public class Provider
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
+        [Key]
+        public int SPId { get; set; }
+        public string SPName { get; set; }
+        public string SPEmail { get; set; }
+        public string SPPassword { get; set; }
+        public int SPType { get; set; }
 
     
     }
