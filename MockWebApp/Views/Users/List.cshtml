@@ -30,7 +30,7 @@
                 <td>@athlete.UserJersey</td>
                 <td>@athlete.UserPic</td>
                 <td>
-                    <a>Edit</a>
+                    <a class="btn btn-primary" asp-controller="Users" asp-action="Edit" asp-route-id="@athlete.Id">Edit</a>
                 </td>
             </tr>
         }
