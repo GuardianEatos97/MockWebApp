@@ -19,7 +19,13 @@
             </ul>
         </div>
 
-            <button type="button">Add Workout Program</button>
+        <!-- In CurrentProgramWorkout.cshtml -->
+        @using (Html.BeginForm("BodyPartSelect", "Workout", FormMethod.Get))
+        {
+            <input class="button" type="submit" value="Add Workout Program" />
+        }
+  
+        
 
         
     </div>
@@ -108,13 +114,20 @@
         border-bottom: none;
     }
 
-    button {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: #D4AF37;
-        color: #fff;
-        border-radius: 0 5px 5px 0;
+    .button {
+        display: block;
+        width: 40%;
+        margin: 1em auto;
+        height: 1em;
+        font-size: 1.2rem;
+        background-color: #D4AF37;
+        border-width: 3px;
+        border-color: white;
+        color: white;
+        min-width: 200px;
+        min-height: 50px;
+        text-align: center;
+        border-radius: 10px;
     }
 </style>
 

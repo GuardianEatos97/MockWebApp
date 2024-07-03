@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "CustomProgram";
 }
-
+<html>
     <body>
         <header>
     <h1>Custom Program</h1>
@@ -40,11 +40,26 @@
     <a href="preview.cshtml">
         <button>Preview</button>
 
+        <footer>
+            <div class="quick-links">
+                <a href="#"> Privacy Policy</a>
+                <a href="#"> Terms of Service</a>
+                <a href="#"> Site Map</a>
+            </div>
+            <div class="contact-info">
+                <p> University of the Western Cape, Cape Town, South Africa</p>
+                <p> 021 591 2245 </p>
+                <p> sports@uwc.ac.za</p>
+            </div>
+        </footer>
 
+    </body>
+        </html>
+        
         <style>
             body {
                 width: 100%;
-                height: 100vh;
+                height: 140vh;
                 margin: 0;
                 background-color: #000435;
                 color: #f5f6f7;
@@ -70,7 +85,6 @@
                 margin-bottom: 2rem;
                 padding: 1rem;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
 
             .exercise {
@@ -90,8 +104,20 @@
                 color: #fff;
                 padding: 1rem 2rem;
                 text-align: center;
+                margin-top: auto;
+                height: -50vh;
+
             }
+
+        .quick-links, footer .social-media, footer .contact-info {
+            margin-bottom: 1rem;
+        }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5rem;
+    }
 
     </style>
 
-</body>
