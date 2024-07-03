@@ -2,8 +2,8 @@
 {
     public class ProviderVM
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
+        public int SPId { get; set; }
+        public string SPName { get; set; }
+        public int SPType { get; set; }
     }
 }

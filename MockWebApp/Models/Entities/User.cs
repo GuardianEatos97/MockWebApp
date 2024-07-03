@@ -6,11 +6,12 @@ namespace MockWebApp.Models.Entities
     {
         
         public Guid Id { get; set; }
-        public int Jersey { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string Team { get; set; }
+        public string UserPic { get; set; }    
+        public int UserJersey { get; set; }
+        public string UserName { get; set; }
+        public string UserEmail { get; set; }
+        public string UserPassword { get; set; }
+        public string UserTeam { get; set; }
     
     }
 }
