@@ -30,6 +30,11 @@ namespace MockWebApp.Controllers
         {
             return View();
         }
+        public IActionResult WorkoutNav()
+        {
+            return View();
+        }
+
 
 
 
