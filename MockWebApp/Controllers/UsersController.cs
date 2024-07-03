@@ -37,14 +37,50 @@ namespace MockWebApp.Controllers
 
         [HttpGet]
         public async Task<IActionResult> List()
-        { 
-        var athletes = await databaseContext.Users.ToListAsync();
-            return View(athletes);
+        {
+            var athlete = await databaseContext.Users.ToListAsync();
+            return View(athlete);
         }
 
-        
-    
-    
-    
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var athlete = await databaseContext.Users.FindAsync(id);
+            return View(athlete);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(User view)
+        {
+            var athlete = await databaseContext.Users.FindAsync(view.Id);
+            if (athlete is not null)
+            {
+                athlete.UserName = view.UserName;
+                athlete.UserPic = view.UserPic;
+                athlete.UserPassword = view.UserPassword;
+                athlete.UserEmail = view.UserEmail;
+                athlete.UserJersey = view.UserJersey;
+                athlete.UserTeam = view.UserTeam;
+
+                await databaseContext.SaveChangesAsync();
+            }
+
+            return RedirectToAction("List", "Users");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var athete = await databaseContext.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+            if (athete is not null)
+            {
+                databaseContext.Users.Remove(athete);
+                await databaseContext.SaveChangesAsync();
+            }
+            return RedirectToAction("List", "Users");
+
+
+
+
+        }
     }
 }

@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<MockWebApp.Models.Entities.User>
+
+<hi>List Of Athletes</hi>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Team Name</th>
+            <th>Jersey Number</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var athlete in Model)
+        {
+            <tr>
+                <td>@athlete.UserId</td>
+                <td>@athlete.UserName</td>
+                <td>@athlete.UserEmail</td>
+                <td>@athlete.Team</td>
+                <td>@athlete.UserJersey</td>
+                <td>@athlete.UserPic</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="Users" asp-action="Edit" asp-route-id="@athlete.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
