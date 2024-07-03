@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MockWebApp</title>
+    <title>@ViewData["Title"] - Demo Web App</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MockWebApp.styles.css" asp-append-version="true" />
@@ -23,9 +23,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Workout" asp-action="WorkoutNav">Workout Nav</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rehab" asp-action="RehabNav">Rehab Nav</a>
+                        </li>
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li> *@
+                        @* <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Workout" asp-action="CurrentProgramWorkout">Current Workout Programs</a>
                         </li>
                         <li class="nav-item">
@@ -36,25 +42,34 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Workout" asp-action="SelectTeamAndPreview">Preview</a>
+                        </li> *@
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rehab" asp-action="BuildProgram">Build Program</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BuildProgram">Build Program</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AthleteName">Athlete Details</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rehab" asp-action="AthleteName">Athlete Details</a>
+
 
                             <a class="nav-link text-dark" asp-area="" asp-controller="Rehab" asp-action="PhysioCP">PhysioCP</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Rehab" asp-action="SelectAthlete">SelectAthlete</a>
-
                         </li>
                         <li class="nav-item">
+
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CustomProgram">CustomProgram</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Add">Athlete Registration</a>
+
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rehab" asp-action="Preview">Preview</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rehab" asp-action="PhysioCP">PhysioCP</a>
+                        </li> *@
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ServiceProviders" asp-action="Signin">Sign In</a>
+                        </li> *@
                     </ul>
                 </div>
             </div>

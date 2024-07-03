@@ -13,11 +13,37 @@ namespace MockWebApp.Controllers
             _logger = logger;
         }
 
+        public IActionResult BuildProgram()
+        {
+            return View();
+        }
+
+        public IActionResult AthleteName()
+        {
+            return View();
+        }
+
         public IActionResult PhysioCP()
         {
             return View();
         }
         public IActionResult SelectAthlete()
+        {
+            return View();
+        }
+
+
+        public IActionResult Preview()
+        {
+            return View();
+        }
+
+        public IActionResult CustomProgram()
+        {
+            return View();
+        }
+
+        public IActionResult RehabNav()
         {
             return View();
         }
