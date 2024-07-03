@@ -2,11 +2,10 @@
 @{
     ViewData["Title"] = "SelectExercise";
 }
+<div class="select-exercise">
+    <p>Select exercises from the list below</p>
+</div>
 
-
-
-<h1>SelectExercise</h1>
-<p>Select an exercise from the list below</p>
 <div class="scrollable-list-container">
     <ul class="scrollable-list">
         <li>Deadlift</li>
@@ -17,16 +16,42 @@
     </ul>
 </div>
 
-<button class="center-button" type="button">Add Exercises</button>
+<!-- In CurrentProgramWorkout.cshtml -->
+@using (Html.BeginForm("SelectTeamAndPreview", "Workout", FormMethod.Get))
+{
+    <input class="center-button" type="submit" value="Add Exercises" />
+}
 <style>
+    header {
+        background: #D4AF37;
+        color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    body {
+        line-height: 1.6;
+        background-color: #000435;
+        color: #D4AF37;
+    }
+
+    .select-exercise{
+        color:#D4af37;
+        text-align:center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+    }
+
     .scrollable-list-container {
         max-height: 400px;
         width: auto;
-        border: 1px solid #000;
+        border: 1px solid #D4AF37;
         padding: 1rem;
+        background-color: white;
         overflow-y: scroll;
     }
-
 
     .scrollable-list {
         list-style-type: none;
@@ -34,21 +59,29 @@
         margin: 0;
     }
 
-        .scrollable-list li {
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
+    .scrollable-list li {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
 
-            .scrollable-list li:last-child {
-                border-bottom: none;
-            }
+    .scrollable-list li:last-child {
+        border-bottom: none;
+    }
 
     .center-button {
-        border: 1px solid #000;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        margin-top: 1rem;
+        display: block;
+        width: 40%;
+        margin: 1em auto;
+        height: 1em;
+        font-size: 1.2rem;
+        background-color: #D4AF37;
+        border-width: 3px;
+        border-color: white;
+        color: white;
+        min-width: 200px;
+        min-height: 50px;
         text-align: center;
+        border-radius: 10px;
     }
 
 </style>
