@@ -38,8 +38,8 @@ namespace MockWebApp.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         { 
-        var athletes = await databaseContext.Users.ToListAsync();
-            return View(athletes);
+        var athlete = await databaseContext.Users.ToListAsync();
+            return View(athlete);
         }
 
         
