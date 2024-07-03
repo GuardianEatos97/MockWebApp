@@ -24,11 +24,11 @@ namespace MockWebApp.Controllers
         {
             var user = new User
             {
-                UserName = userVM.Name,
-                UserEmail = userVM.Email,
-                UserPassword = userVM.Password,
-                UserTeam = userVM.Team,
-                UserJersey = userVM.Jersey,
+                UserName = userVM.UserName,
+                UserEmail = userVM.UserEmail,
+                UserPassword = userVM.UserPassword,
+                UserTeam = userVM.UserTeam,
+                UserJersey = userVM.UserJersey,
             };
             await databaseContext.Users.AddAsync(user);
             await databaseContext.SaveChangesAsync();
