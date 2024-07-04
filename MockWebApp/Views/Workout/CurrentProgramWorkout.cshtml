@@ -3,47 +3,60 @@
     ViewData["Title"] = "CurrentProgramWorkout";
 }
 
-<body>
+<body style="text-center">
+        <h2>Select Items:</h2>
+
+        <form id="itemForm">
+            <input type="checkbox" id="item1" name="item" value="Strength And Conditioning">
+            <label for="item1">Strength And Condioning Workouts</label><br>
+
+            <input type="checkbox" id="item2" name="item" value="Agility">
+            <label for="item2">Agility Workouts</label><br>
+
+            <input type="checkbox" id="item3" name="item" value="Forwards Workouts">
+            <label for="item3">Forwards Workouts</label><br>
+
+            <input type="checkbox" id="item4" name="item" value="Backline Workouts">
+            <label for="item4">Backline Workouts</label><br>
+
+            <input type="checkbox" id="item5" name="item" value="Scrumhalf Workouts">
+            <label for="item5">Scrumhalf Workouts</label><br>
+        </form>
+
+        <div class="selected-items">
+            <h2>Selected Preview:</h2>
+            <ul id="selectedList"></ul>
+        </div>
+
+        <script>
+            // JavaScript to handle checkbox selection
+            var checkboxes = document.querySelectorAll('input[name="item"]');
+            var selectedList = document.getElementById('selectedList');
+
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    if (this.checked) {
+                        // Add item to selected list
+                        var listItem = document.createElement('li');
+                        listItem.textContent = this.value;
+                        selectedList.appendChild(listItem);
+                    } else {
+                        // Remove item from selected list if unchecked
+                        var items = selectedList.getElementsByTagName('li');
+                        for (var i = 0; i < items.length; i++) {
+                            if (items[i].textContent === this.value) {
+                                items[i].remove();
+                                break;
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+
+   
+
     <div class="align-self-sm-center">
-        <div class="title-color">
-            <h1>Current Program Workout</h1>
-        </div>
-
-        <div class="scrollable-list-container">
-            <ul class="scrollable-list">
-                <li>
-                    <label for="checkbox1">
-                        <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
-                            Strength and Conditioning
-                    </label>
-                </li>
-                <li>
-                    <label for="checkbox2">
-                        <input type="checkbox" id="checkbox2" name="checkbox2" value="option2">
-                        Agility
-                    </label>
-                </li>
-                <li>
-                    <label for="checkbox3">
-                        <input type="checkbox" id="checkbox3" name="checkbox3" value="option3">
-                        Forwards Workouts
-                    </label>
-                </li>
-                <li>
-                    <label for="checkbox4">
-                        <input type="checkbox" id="checkbox4" name="checkbox4" value="option4">
-                        Backline Workouts
-                    </label>
-                </li>
-                <li>
-                    <label for="checkbox5">
-                        <input type="checkbox" id="checkbox5" name="checkbox5" value="option5">
-                        Scrumhalf Workouts
-                    </label>
-                </li>
-            </ul>
-        </div>
-
         <!-- In CurrentProgramWorkout.cshtml -->
         @using (Html.BeginForm("BodyPartSelect", "Workout", FormMethod.Get))
         {
