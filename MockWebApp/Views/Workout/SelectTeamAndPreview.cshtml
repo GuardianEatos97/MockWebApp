@@ -174,57 +174,83 @@
         </head>
         
 <body>
-
-    <h2>Select Items:</h2>
-
-    <form id="itemForm">
-        <input type="checkbox" id="item1" name="item" value="Item 1">
-        <label for="item1">Item 1</label><br>
-
-        <input type="checkbox" id="item2" name="item" value="Item 2">
-        <label for="item2">Item 2</label><br>
-
-        <input type="checkbox" id="item3" name="item" value="Item 3">
-        <label for="item3">Item 3</label><br>
-
-        <input type="checkbox" id="item4" name="item" value="Item 4">
-        <label for="item4">Item 4</label><br>
-
-        <input type="checkbox" id="item5" name="item" value="Item 5">
-        <label for="item5">Item 5</label><br>
-    </form>
-
-    <div class="selected-items">
-        <h2>Selected Items:</h2>
-        <ul id="selectedList"></ul>
+    <div class="text-center">
+        <h1 class="display-6">Select Team</h1>
     </div>
 
-    <script>
-        // JavaScript to handle checkbox selection
-        var checkboxes = document.querySelectorAll('input[name="item"]');
-        var selectedList = document.getElementById('selectedList');
+        <div class="image-grid">
+            <div class="image-grid-item">
+            <a href="mt-3">
+                <img input type="image" src="https://switchbrand.co.za/wp-content/uploads/Switch-Web-01.jpg" style="width:150px;height:120px;" />
+            </a>
+            </div>
+            <div class="image-grid-item">
+            <a href="mt-3">
+                <img input type="image" src="https://content.sportslogos.net/news/2016/04/all-blacks-logo.png" style="width:150px;height:120px;" />
+            </a>
+            </div>
+            <div class="image-grid-item">
+            <a href="mt-3">
+                <img input type="image" src="https://wallpapers.com/images/featured/ireland-rugby-51i2dskz5edoilnf.jpg" style="width:150px;height:120px;" />
+            </a>
+            </div>
+            <div class="image-grid-item">
+                <a href="mt-3">
+                <img input type="image" src="https://rhinoshield.eu/cdn/shop/collections/FFR_icon_626e2693-1212-4a99-b17e-c599e038bb4a.jpg" style="width:150px;height:120px;" />
+            </a>
+            </div>
+            <div class="image-grid-item">
+                <a href="mt-3">
+                <img input type="image" src="https://searchvectorlogo.com/wp-content/uploads/2020/09/england-rugby-logo-vector.png" style="width:150px;height:120px;" />
+                </a>
+            </div>
+            <div class="image-grid-item">
+                <a href="mt-3">
+                <img input type="image" src="https://wallpapers.com/images/hd/scotland-rugby-1920-x-1080-wallpaper-q36d9gequohzgo36.jpg" style="width:150px;height:120px;" />
+                </a>
+            </div>
+        </div>
 
-        checkboxes.forEach(function (checkbox) {
-            checkbox.addEventListener('change', function () {
-                if (this.checked) {
-                    // Add item to selected list
-                    var listItem = document.createElement('li');
-                    listItem.textContent = this.value;
-                    selectedList.appendChild(listItem);
-                } else {
-                    // Remove item from selected list if unchecked
-                    var items = selectedList.getElementsByTagName('li');
-                    for (var i = 0; i < items.length; i++) {
-                        if (items[i].textContent === this.value) {
-                            items[i].remove();
-                            break;
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+    <div class="text-center">
+        <h1 class="display-6">Select Athlete</h1>
+    </div>
 
+    <div class="image-grid">
+        <div class="image-grid-item">
+            <a href="mt-3">
+            <img input type="image" src="https://dims.apnews.com/dims4/default/4102c14/2147483647/strip/true/crop/7260x4840+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fa3%2Fd8%2Ff5b85cd6ca0767be8fb692b190fa%2F3adeffaa0524474a968151067b4156cb" style="width:150px;height:120px;" />
+            </a>
+        </div>
+        <div class="image-grid-item">
+            <a href="mt-3">
+            <img input type="image" src="https://static.independent.co.uk/2023/09/07/17/newFile.jpg" style="width:150px;height:120px;" />
+            </a>
+        </div>
+        <div class="image-grid-item">
+            <a href="mt-3">
+            <img input type="image" src="https://static.independent.co.uk/2024/01/17/14/b22268b65a19e9dcf37600028f0509dfY29udGVudHNlYXJjaGFwaSwxNzA1NTg0ODk4-2.70870307.jpg" style="width:150px;height:120px;" />
+            </a>
+        </div>
+        <div class="image-grid-item">
+            <a href="mt-3">
+            <img input type="image" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/N2IONQODFVI25CQHRCMSOD2DBA.jpg" style="width:150px;height:120px;" />
+            </a>
+        </div>
+        <div class="image-grid-item">
+            <a href="mt-3">
+            <img input type="image" src="https://e3.365dm.com/23/11/1600x900/skynews-owen-farrell-england_6376701.jpg?20231129152515" style="width:150px;height:120px;" />
+            </a>
+        </div>
+        <div class="image-grid-item">
+            <a href="mt-3">
+            <img input type="image" src="https://e0.365dm.com/22/10/2048x1152/skysports-finn-russell-scotland_5936128.jpg?20221019153441" style="width:150px;height:120px;" />
+            </a>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h1 class="display-6">Preview</h1>
+    </div>
 </body>
 </html>
 
