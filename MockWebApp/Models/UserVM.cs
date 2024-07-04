@@ -2,7 +2,7 @@
 {
     public class UserVM
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string UserPic { get; set; }
         public int UserJersey { get; set; }
         public string UserName { get; set; }

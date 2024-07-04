@@ -9,7 +9,7 @@ namespace MockWebApp.Models.Entities
         public int WorkoutId { get; set; }
         
         [ForeignKey(nameof(User))]
-        public Guid UserID { get; set; }
+        public int UserID { get; set; }
         
         public string WorkoutName { get; set; }
         public string WorkoutDescription { get; set; }
