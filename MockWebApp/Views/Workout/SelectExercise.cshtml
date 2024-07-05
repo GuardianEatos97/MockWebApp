@@ -103,6 +103,21 @@
 </head>
 
 <body>
+    <h1>Body Part Selected:</h1>
+
+    <div id="category-label"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const category = params.get('category');
+            if (category) {
+                const categoryLabelElement = document.getElementById('category-label');
+                categoryLabelElement.textContent = category;
+            }
+        });
+    </script>
+
     <h1>Workouts and Warm-Ups for Athletes</h1>
 
     <h2>General Warm-Ups <input type="checkbox"></h2>
@@ -274,12 +289,47 @@
                 
             </tr>
             <tr>
-                <td>Warm-Ups <input type="checkbox"></td>
+                <td>Warm-Ups</td>
                 <td>Light Jogging, Jumping Jacks, Dynamic Stretching, Skipping</td>
                 <td></td>
             </tr>
         </tbody>
     </table>
+    <!-- Checkbox preview section -->
+    <div id="checkbox-preview">
+        <h2>Selected Workout Categories:</h2>
+        <ul id="selected-categories">
+            <!-- List items for each checkbox section -->
+        </ul>
+    </div>
+
+    <!-- Script to update checkbox preview -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to update the checkbox preview
+            function updateCheckboxPreview() {
+                const selectedCategories = document.querySelectorAll('h2 input[type="checkbox"]:checked');
+                const previewList = document.getElementById('selected-categories');
+                previewList.innerHTML = ''; // Clear previous items
+
+                selectedCategories.forEach(function (category) {
+                    const categoryName = category.parentNode.textContent.trim();
+                    const listItem = document.createElement('li');
+                    listItem.textContent = categoryName;
+                    previewList.appendChild(listItem);
+                });
+            }
+
+            // Attach event listener to checkboxes
+            const checkboxes = document.querySelectorAll('h2 input[type="checkbox"]');
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', updateCheckboxPreview);
+            });
+
+            // Initial update of checkbox preview
+            updateCheckboxPreview();
+        });
+    </script>
 </body>
 
 <!-- In CurrentProgramWorkout.cshtml -->
