@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MockWebApp.Data;
 
@@ -11,9 +12,11 @@ using MockWebApp.Data;
 namespace MockWebApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240708144540_Add warm-up")]
+    partial class Addwarmup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,10 +34,6 @@ namespace MockWebApp.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BodyPartId"));
 
                     b.Property<string>("BodyPartDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BodyPartImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -193,16 +192,10 @@ namespace MockWebApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("ExcerciseID")
+                    b.Property<int>("ExcerciseID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("WarmUpID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("WorkOutID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("week")
+                    b.Property<int>("WorkOutID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
