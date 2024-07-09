@@ -1,7 +1,10 @@
 ﻿
 @{
     ViewData["Title"] = "SelectExercise";
+
 }
+@model Tuple<List<MockWebApp.Models.Entities.Excercise>,List<MockWebApp.Models.Entities.Warm_Ups>,List<MockWebApp.Models.Entities.BodyPart>>
+ 
 <div class="select-exercise">
     <p></p>
 </div>
@@ -117,8 +120,11 @@
             </tr>
         </tbody>
     </table>
-
-    <h2>Arms <input type="checkbox"></h2>
+    
+    @foreach (var item in Model.Item3)
+    {
+        <h2>@item.BodyPartName <input type="checkbox"></h2>
+    }
     <table>
         <thead>
             <tr>
@@ -128,15 +134,22 @@
             </tr>
         </thead>
         <tbody>
+           
             <tr>
                 <td class="header">Workouts</td>
-                <td class="cell">
-                    Biceps: Barbell Curls, Dumbbell Curls, Hammer Curls, Concentration Curls, Preacher Curls<br>
-                    Triceps: Tricep Dips, Tricep Pushdowns, Skull Crushers, Overhead Tricep Extension, Close-Grip Bench Press
-                </td>
-                <td></td>
+               
+                    <td class="cell">
+                    @foreach (var item in Model.Item2)
+                    {
+                        @item.WarmUpName 
+                    }
+                    , 
+                 </td>
                 
+                
+               
             </tr>
+                           
             <tr>
                 <td class="header">Warm-Ups</td>
                 <td class="cell">Arm Circles, Light Dumbbell Curls, Tricep Stretch</td>
@@ -145,7 +158,7 @@
             </tr>
         </tbody>
     </table>
-
+    
     <h2>Back and Shoulders <input type="checkbox"></h2>
     <table>
         <thead>

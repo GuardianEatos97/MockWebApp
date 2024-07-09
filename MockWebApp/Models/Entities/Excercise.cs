@@ -11,6 +11,8 @@ namespace MockWebApp.Models.Entities
         public string ExcerciseDescription { get; set; }
         public string? Category { get; set; }
 
+        public string ExcerciseORWarmup { get; set; }
+        
         [ForeignKey(nameof(BodyPart))]
         public int BodyPartID { get; set; }
     }

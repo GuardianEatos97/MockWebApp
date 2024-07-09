@@ -155,13 +155,14 @@
 <h1 class="display-1">Select Body Part</h1>
 </div>
 
+
 @foreach (var bodypart in Model)
 {
     <div class="text-center">
     <label class="display-6">@bodypart.BodyPartName</label>
 </div>
     <div class="text-center">
-        <a href = "@Url.Action("SelectExercise")">
+        <a href="@Url.Action("SelectExercise",new { id = bodypart.BodyPartId})">
  <img input type="image" src="@bodypart.BodyPartImage;0.250xw,0&resize=640:*" style="width:250px;height:250px;" />
         </a>
     </div>
