@@ -1,107 +1,201 @@
-﻿<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    header {
-        background: #D4AF37;
-        color: #fff;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-
-    body {
-        line-height: 1.6;
-        background-color: #000435;
-        color: #D4AF37;
-    }
-
-    footer {
-        background: #D4AF37;
-        color: #fff;
-        padding: 1rem 2rem;
-        text-align: center;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    nav ul {
-        list-style: none;
-        display: flex;
-    }
-
-        nav ul li {
-            margin-left: 1rem;
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #14d1b7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130vh;
+            margin: 10px; /* Adjust the value as needed */
         }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
+        :root {
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
             }
 
-    .title-color {
-        color: #D4AF37;
-        text-align: center;
-    }
-
-    .scrollable-list-container {
-        margin-block-start: 1rem;
-        max-height: 400px;
-        width: auto;
-        border: 1px solid #D4AF37;
-        padding: 1rem;
-        background-color: white;
-        overflow-y: scroll;
-    }
-
-    .scrollable-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        color: #D4AF37;
-    }
-
-        .scrollable-list li {
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-            color: #D4AF37;
+        .error {
+            color: red;
+            margin-bottom: 15px;
         }
 
-            .scrollable-list li:last-child {
-                border-bottom: none;
+        .calendar {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+            .calendar th, .calendar td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: center;
             }
 
-    .button {
-        display: block;
-        width: 40%;
-        margin: 1em auto;
-        height: 1em;
-        font-size: 1.2rem;
-        background-color: #D4AF37;
-        border-width: 3px;
-        border-color: white;
-        color: white;
-        min-width: 200px;
-        min-height: 50px;
-        text-align: center;
-        border-radius: 10px;
-    }
-</style>
+            .calendar th {
+                background-color: #f4f4f4;
+            }
 
- <body>
-    <div class="align-self-sm-center">
-        <!-- In CurrentProgramWorkout.cshtml -->
-        @using (Html.BeginForm("BodyPartSelect", "Workout", FormMethod.Get))
-        {
-            <input class="button" type="submit" value="Add Workout Program" />
+            .calendar td {
+                height: 100px;
+                vertical-align: top;
+            }
+
+            .calendar .day {
+                font-weight: bold;
+            }
+
+        .add-program {
+            margin: 20px 0;
         }
+
+            .add-program button {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .add-program button:hover {
+                    background-color: #0056b3;
+                }
+    </style>
+</head>
+<body>
+
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th class="day">Sun</th>
+                <th class="day">Mon</th>
+                <th class="day">Tue</th>
+                <th class="day">Wed</th>
+                <th class="day">Thu</th>
+                <th class="day">Fri</th>
+                <th class="day">Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="add-program">
+        <button onclick="navigateToSelectTeam()">Add New Program</button>
     </div>
- </body>
+
+    <script>
+        function navigateToSelectTeam() {
+            window.location.href = 'selectteam.html';  // Ensure this file exists in the same directory
+        }
+    </script>
+    </body>
+</html>
