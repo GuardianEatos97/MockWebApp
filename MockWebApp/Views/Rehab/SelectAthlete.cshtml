@@ -4,20 +4,48 @@
 
 @model List<MockWebApp.Models.Entities.User>
 
-<body>
+
     <h1>Select Athlete</h1>
-        <body>
-        <div class="container">
-                <img src="https://us.123rf.com/450wm/wavebreakmediamicro/wavebreakmediamicro1509/wavebreakmediamicro150943212/45525879-portrait-of-serious-athlete-with-rugby-ball-against-black-background.jpg?ver=6"
-             alt="Profile 1" width="80" height="80">
+    <style>
+    .ath-image {
+        vertical-align: middle;
+        text-align: center;
+    }
+        .ath-dets
+        {
+        width:72%;}
+        .ath-check
+        {
+        width:3%;
+        justify-content: center;
+        background-color:#cecece;
+        }
+
+    .flex-container
+    {display:flex;}
+
+    </style>
+        <div class="flex-container">
+    <div class="ath-check">
         <input type="checkbox">
-        <ul>
+    </div>
+            <div class="ath-image">
+                <img src="https://us.123rf.com/450wm/wavebreakmediamicro/wavebreakmediamicro1509/wavebreakmediamicro150943212/45525879-portrait-of-serious-athlete-with-rugby-ball-against-black-background.jpg?ver=6"
+                     alt="" />
+            </div>
+            
+            <div class="ath-dets">
+               
+                     <ul>
                         <li>ID: 001</li>
                         <li>Name: John Doe</li>
                         <li>Jersey Number: 10</li>
                         <li>Email: john.doe@example.com</li>
                         <li>Team: UWC Rugby</li>
-        </ul>
+                      </ul>
+                </div>
+               
+        
         </div>
 
         <div class="container">
@@ -136,14 +164,14 @@
                         <li>Team: UWC Rugby</li>
                 </ul>
         </div>
-        </body>
+     
 
         <a href="PhysioCP.cshtml">
             <button>Save</button>
             </a>
 
            
-        </body>
+     
 
             <style>
                 header {
