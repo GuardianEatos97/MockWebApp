@@ -7,13 +7,9 @@ namespace MockWebApp.Models.Entities
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey(nameof(Warm_Ups))]
-        public int? WarmUpID { get; set; }
         [ForeignKey(nameof(Excercise))]
-        public int? ExcerciseID { get; set; }
+        public int ExcerciseID { get; set; }
         [ForeignKey(nameof(Workout))]
-        public int? WorkOutID {get; set; }
-
-        public int? week { get; set; }
+        public int WorkOutID {get; set; }
     }
 }

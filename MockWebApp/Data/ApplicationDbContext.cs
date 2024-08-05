@@ -16,7 +16,6 @@ namespace MockWebApp.Data
         public DbSet<ProviderType> Types { get; set; }
         public DbSet<Workout> Workouts { get; set; }
         public DbSet<WorkOut_Excercise> Workout_Excercises { get; set; }
-        public DbSet<Warm_Ups> Warm_Ups { get; set; }
     }
     
 }
